@@ -20,10 +20,6 @@ class Student:
 
     def getStudent(self):
         return("Student:", self.name, "degree:", self.degree, "StudentID", self.studentID )
-        
-
-
-
 
 class Course:
     def __init__(self, course_name, course_code, enrolled_students):
@@ -39,16 +35,12 @@ class Course:
 
 class GraduateStudent(Student):
     def __init__(self, name, degree, studentID, research_topic):
-        self.name = name
-        self.degree = degree
-        self.studentID = studentID
+        super().__init(name, degree, studentID)
         self.research_topic = research_topic
 
 class UndergraduateStudent(Student):
     def __init__(self, name, degree, studentID, year_in_industry, foundation, repeater):
-        self.name = name
-        self.degree = degree
-        self.studentID = studentID
+        super().__init__(name,degree,studentID)
         self.year_in_industry = year_in_industry
         self.foundation = foundation
         self.repeater = repeater
